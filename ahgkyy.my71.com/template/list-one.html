@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="SiteName" content="{{site_setting.site_name}}" />
+    <meta name="SiteDomain" content="{{site_setting.site_url}}" />
+    <meta name="SiteIDCode" content="{{site_setting.site_identity}}" />
+    <meta name="keywords" content="宣城市国土资源局" />
+    <meta name="description" content="宣城市国土资源局" />
+    <meta name="ColumnType" content="{{channel_name}}">
+    <meta name="ColumnName" content="{{menu_name}}">
+    <meta name="ColumnKeywords" content="{{key_word}}" />
+    <meta name="ColumnDescription" content="{{description}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>宣城市国土资源局</title>
+    <!--Css on-->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/media/css/normalize.css">
+    <link rel="stylesheet" href="/media/css/public.css">
+    <link rel="stylesheet" href="/media/css/page.css">
+    <!--Css end-->
+</head>
+<body>
+
+	<!--头部 on-->
+    {{ include('header.html') }}
+    <!--头部 end-->
+    <!--主体 on-->
+    <div class="is-main">
+        <!--面包屑导航 on-->
+        <div class="m-location">
+            {{ location }}
+        </div>
+        <!--面包屑导航 end-->
+        <!--左侧 on-->
+        <div class="list-left fl">
+            <h1>{{ channel_name }}</h1>
+            <div class="listleft-box">
+                <ul>
+                    {{ BEGIN menu-current_15_0_8 }}
+                    <li id="menu_{{ _id }}"><a href="{{url}}" title="{{name}}">{{ name }}</a></li>
+                    {{ END }}
+                </ul>
+            </div>
+        </div>
+        <!--左侧 end-->
+        <!--右侧 on-->
+        <div class="list-right fr">
+            <h1 class="listright-title"><span>{{menu_name}}</span></h1>
+            <div class="listdetail-box">
+				{{ content }}
+            </div>
+            <div class="downlist">
+				<ul>
+					{{ BEGIN attach }}
+					<li><a href="{{ url }}">{{ name }} </a></li>
+					{{ END }}
+				</ul>
+			</div>
+        </div>
+        <!--右侧 end-->
+        <div class="clear"></div>
+    </div>
+    <!--主体 end-->
+	<!--底部 on-->
+	{{ include('footer.html') }}
+	<!--底部 end-->
+	<!--Js on-->
+    <script type="text/javascript" src="/media/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/media/js/gov.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#menu_{{ menu_id }}").addClass('list-active'); 
+		});
+	</script>
+    <!--Js end-->
+</body>
+</html>

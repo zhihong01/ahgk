@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="SiteName" content="{{site_setting.site_name}}" />
+    <meta name="SiteDomain" content="{{site_setting.site_url}}" />
+    <meta name="SiteIDCode" content="{{site_setting.site_identity}}" />
+    <meta name="keywords" content="安徽省港口运营集团有限公司" />
+    <meta name="description" content="安徽省港口运营集团有限公司" />
+    <meta name="ArticleTitle" content="{{content.title}}">
+    <meta name="PubDate" content="{{content.release_date}}">
+    <meta name="ContentSource" content="{{content.copy_from}}">
+    <meta name="ArticleTitle" content="{{content.title}}">
+    <meta name="PubDate" content="{{content.release_date}}">
+    <meta name="ColumnType" content="{{channel_name}}">
+    <meta name="ColumnName" content="{{menu_name}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>安徽省港口运营集团有限公司</title>
+    <!--Css on-->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="../media/css/normalize.css">
+    <link rel="stylesheet" href="../media/css/public.css">
+    <link rel="stylesheet" href="../media/css/page.css">
+    <!--Css end-->
+</head>
+<body>
+    <!--头部 on-->
+    <div class="is-header">
+		<div class="is-top">
+			<div class="m-middle">
+				<span class="fl">您好，欢迎访问安徽省港口运营集团有限公司官网!</span>
+				<span class="fr">
+					<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+					|
+					<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+				</span>	
+			</div>
+		</div>
+		<div class="is-nav">
+			<img src="../media/images/public/logo.png" class="fl u-logo">
+			<ul class="m-nav fr">
+				<li>
+					<a href="" target="_blank">
+						<span>首页</span>
+						<span>HOME</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="" target="_blank">
+						<span>公司概况</span> 
+						<span>ABOUT US</span>
+					</a>
+				</li>
+				<li>
+					<a href="" target="_blank">
+						<span>公司资讯</span> 
+						<span>NEWS</span>
+					</a>
+				</li>
+				<li>
+					<a href="" target="_blank">
+						<span>公司党建</span> 
+						<span>COMMUNIST</span>
+					</a>
+				</li>
+				<li>
+					<a href="" target="_blank">
+						<span>通知公告</span> 
+						<span>NOTICE</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="is-banner">
+		<img src="../media/images/page/gkbanner.jpg">
+	</div>
+    <!--头部 end-->
+    <!--主体 on-->
+    <div class="is-main">
+        <!--面包屑导航 on-->
+        <div class="m-location">
+            {{ location }}
+        </div>
+        <!--面包屑导航 end-->
+        <div class="detail-box">
+            <h1 class="detail-ltitle">{{ content.title }}</h1>
+            <h2 class="detail-stitle">{{ content.subhead}}</h2>
+            <div class="detail-info">
+                <div class="detailinfo-left fl">
+                    <span>阅读次数：{{content.views}}</span>
+                    <span>{{ content.author }}</span>
+                    <span>{{ content.copy_from }}</span>
+                    <span>发布时间：{{ content.release_date }}</span>
+                </div>
+                <div class="detailinfo-font fl">
+                    [字体：<a href="javascript:doZoom(18)">大</a>&nbsp;<a href="javascript:doZoom(15)">中</a>&nbsp;<a href="javascript:doZoom(14)">小</a>]
+                </div>
+                <div class="bdsharebuttonbox fr"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                <script>
+				window._bd_share_config = {
+					"common": {
+						"bdSnsKey": {},
+						"bdText": "",
+						"bdMini": "2",
+						"bdPic": "",
+						"bdStyle": "0",
+						"bdSize": "16"
+					},
+					"share": {},
+					"selectShare": {
+						"bdContainerClass": null,
+						"bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+					}
+				};
+				with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~ ( - new Date() / 36e5)];
+				</script>
+            </div>
+            <div id="zoom" class="newscontnet">
+                <div class="text">
+                    {{ content.body }}
+                </div>
+            </div>
+            <div class="wzewm">
+                <span class="txt-color">扫一扫在手机打开当前页</span>
+                <!--<span class="img">
+          		 <script type="text/javascript">var _qrContent='',_qrLogo='',_qrWidth=150,_qrHeight=150,_qrType = 'auto';if(!_qrContent) var _qrContent =escape(document.location.href);document.write(unescape("%3Cscript src='http://qrcode.leipi.org/js.html?qw="+_qrWidth+"&qh="+_qrHeight+"&qt="+_qrType+"&qc="+escape(_qrContent)+"&ql="+escape(_qrLogo)+"' type='text/javascript'%3E%3C/script%3E"));</script> 
+          	</span>-->
+			<div id="qrcode" style="width:120px;height:120px;margin:0 auto;"></div>
+            </div>
+            <div class="detail-downlist">
+                <ul>
+                    {{ BEGIN attach }}
+                    <li><a href="{{url}}">{{ name }} [{{ file_size }}]</a></li>
+                    {{ END }}
+                </ul>
+            </div>
+            <div class="wzbot">
+                <ul class="fxd_close">
+                    <li class="go_top"><a href="javascript:;" title="返回顶部">返回顶部</a></li>
+                    <li><a href="javascript:window.print();" title="打印本页">打印本页</a></li>
+                    <li><a href="javascript:window.close();" title="关闭窗口">关闭窗口</a></li>
+                </ul>
+            </div>
+            <div class="detail-zy">
+                <div class="detail-prev fl">
+                    {{ content_prev }}
+                </div>
+                <div class="detail-next fr">
+                    {{ content_next }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体 end-->
+    <!--底部 on-->
+    {{ include('footer.html') }}
+    <!--底部 end-->
+    <!--Js on-->
+    <script type="text/javascript" src="../media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../media/js/qrcode.min.js"></script>
+    <script type="text/javascript" src="/media/js/gov.js"></script>
+    <script type="text/javascript">
+	    $(function(){
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+			  width : 120,
+			  height : 120
+			});
+			var urlStr = window.location.href;
+			qrcode.makeCode(urlStr);
+		  });
+        function doZoom(size){
+            var zoom = document.all ? document.all['zoom'] : document.getElementById('zoom');
+            zoom.style.fontSize = size + 'px';
+        }
+        $(function(){
+            $(".go_top").click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+                return false;
+            });
+        });
+    </script>
+    <!--Js end-->
+</body>
+</html>
